@@ -13,4 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require jquery.tablesort
+//= require bootstrap.min
+//them gem modal
+
+//= require jquery.modal
 //= require_tree .

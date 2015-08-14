@@ -1,10 +1,12 @@
 class DocumentsController < ApplicationController
   def index
     @documents = Document.all
+
   end
 
   def new
     @document = Document.new
+    
   end
 
   def create
@@ -24,6 +26,6 @@ class DocumentsController < ApplicationController
   end
   private
   def doc_params
-    params.require(:document).permit(:name, :attachment)
+    params.require(:document).permit(:name, :attachment, :category_id)
   end
 end

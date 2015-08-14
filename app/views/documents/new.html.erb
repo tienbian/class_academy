@@ -13,6 +13,8 @@
   <%=f.text_field :name%><br>
   <%= f.label :attachment %>
   <%= f.file_field :attachment %><br>
+  <%= f.label :category%>
+  <%= f.select :category_id, options_for_select(Category.all.collect{ |u| [u.name, u.id] }) %>
   <%= f.submit "Save", class: "btn btn-primary" %>
   <% end %>
 </div>

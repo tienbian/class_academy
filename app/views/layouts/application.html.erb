@@ -7,6 +7,118 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <style>
+  .dropdown-menu {
+    width: 200px ;
+}
+/* make sidebar nav vertical */ 
+@media (min-width: 768px) {
+  .sidebar-nav .navbar .navbar-collapse {
+    padding: 0;
+    max-height: none;
+  }
+  .sidebar-nav .navbar ul {
+    float: none;
+  }
+  .sidebar-nav .navbar ul:not {
+    display: block;
+  }
+  .sidebar-nav .navbar li {
+    float: none;
+    display: block;
+  }
+  .sidebar-nav .navbar li a {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .navbar {
+  background-color: #d5e73c;
+  
+}
+.nav .nav-sidebar .sidebar-menu-item{
+  background-color: #E0E0D1;
+  
+}
+.nav .nav-sidebar .sub-sidebar-menu-item{
+  background-color: #FFFFFF;
+  
+}
+.contain-admin{
+   
+}
+.container-fluid .row .col-md-2{
+border-right: 1px solid #eee;
+min-height: 1000px;
+}
+}
+
+  </style>
+
+<body>
+   <% if notice %>
+    <p class="alert alert-success"><%= notice %></p>
+  <% end %>
+  <% if alert %>
+    <p class="alert alert-danger"><%= alert %></p>
+  <% end %>
+  <nav class="navbar ">
+  <div class="container-fluid">
+    <div class="navbar-header">
+          <a class="navbar-brand" href="#">K31 QUẢN LÝ KINH TẾ</a>
+    </div>
+   
+      
+      
+   
+  </div>
+</nav>
+
+<hr class="divider">
+  <div class="container-fluid">
+
+      <div class="row">
+        
+        <div class = "col-md-2"> 
+         
+          
+           
+
+            <ul class="nav nav-sidebar">
+              <li class="sidebar-menu-item"><a data-toggle="collapse" data-parent="#sidebar" href="#sidebar-category">
+               
+                <span class="glyphicon glyphicon-list-alt"></span>
+                <span class="text">CATEGORIES</span><span class="pull-right caret"></span></a><ul id="sidebar-category" class="collapse nav nav-pills nav-stacked" >
+                 
+                  <%=render "categories/index"%>    
+              </li>
+            </ul>
+            <ul class="nav nav-sidebar">
+              <li class="sidebar-menu-item">           
+                <%=link_to "USER", users_path%>              
+              </li>
+            </ul>
+        </div>        
+        <div class = "col-md-10">
+          <div class = "contain-admin">
+            <%= yield %>
+          </div>
+        </div>
+      </div>
+  </div>
+</hr>
+
+    <script>
+$(document).ready(function(){
+    $(".btn-primary").click(function(){
+        $(".collapse").collapse('toggle');
+    });
+    
+});
+</script>
+
+</body> 
+
+    
 <div class="container" style="padding-top:20px;">
 <%= yield %>
 

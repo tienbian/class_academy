@@ -30,7 +30,7 @@
   margin-top: 0px;
 }
 </style>
-Enter Chat and press enter
+<!-- Enter Chat and press enter
 <div class="input-group">Your mess
   <input type="text" class="form-control" id="input" />
 </div>
@@ -38,23 +38,23 @@ Enter Chat and press enter
 <div class="panel panel-default">
 <div class="panel-heading">Lobby Chat</div>
 <ul class="list-group" id="box"></ul>
-</div>
+</div> -->
 
-<script>(function(){
-    pubnub = PUBNUB.init({
-    publish_key: 'pub-c-abdc8a98-0eb6-4c3a-b217-d8cbe93e15c1',
-    subscribe_key: 'sub-c-6b247b50-26b0-11e5-99ee-0619f8945a4f',
-    secret_key: 'sec-c-MzYwYzRkMmQtMzA0Zi00MWE3LTk1YjUtN2UxNDQ0OWM5Y2Rh'
-  });
-var box = PUBNUB.$('box'), input = PUBNUB.$('input'), channel = 'chat';
-pubnub.subscribe({
-    channel  : channel,
-    callback : function(text) { box.innerHTML = (''+text).replace( /[<>]/g, '' ) + '<br>' + box.innerHTML }
-});
-pubnub.bind( 'keyup', input, function(e) {
-    (e.keyCode || e.charCode) === 13 && pubnub.publish({
-        channel : channel, message : input.value, x : (input.value='')
-    })
-} )
+ <script>(function(){
+//     pubnub = PUBNUB.init({
+//     publish_key: 'pub-c-abdc8a98-0eb6-4c3a-b217-d8cbe93e15c1',
+//     subscribe_key: 'sub-c-6b247b50-26b0-11e5-99ee-0619f8945a4f',
+//     secret_key: 'sec-c-MzYwYzRkMmQtMzA0Zi00MWE3LTk1YjUtN2UxNDQ0OWM5Y2Rh'
+//   });
+// var box = PUBNUB.$('box'), input = PUBNUB.$('input'), channel = 'chat';
+// pubnub.subscribe({
+//     channel  : channel,
+//     callback : function(text) { box.innerHTML = (''+text).replace( /[<>]/g, '' ) + '<br>' + box.innerHTML }
+// });
+// pubnub.bind( 'keyup', input, function(e) {
+//     (e.keyCode || e.charCode) === 13 && pubnub.publish({
+//         channel : channel, message : input.value, x : (input.value='')
+//     })
+// } )
 })()</script>
 <%=render "notices/index"%>

@@ -20,14 +20,14 @@
       <tr>
         <td><%= user.name %></td>
         <td><%= user.email %></td>
-        <td><%= image_tag(user.avatar_url, :width => 100) if user.avatar.present? %></td>
+        <td><%= image_tag(user.avatar_url, :width => 50) if user.avatar.present? %></td>
         <td><%= user.phone %></td>
         <td><%= user.address %></td>
         <td><%= user.birthday %></td>
         <td><%= user.facebook %></td>
         <td><%= link_to 'Show', user ,class: 'btn btn-primary btn-md'%></td>
         <td><%= link_to 'Edit', edit_user_path(user),class: 'btn btn-primary btn-md' %></td>
-        <!-- <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } ,class: 'btn btn-danger btn-md'%></td> -->
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } ,class: 'btn btn-danger btn-md'%></td>
       </tr>
     <% end %>
   </tbody>

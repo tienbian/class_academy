@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :notices
   resources :users
   resources :categories
 resources :documents, only: [:index, :new, :create, :destroy]

@@ -1,0 +1,12 @@
+<%= link_to 'New Notice', new_notice_path, class:  "btn btn-primary btn-md"%>
+<%  @notices.each do |article| %>
+  <h2>
+    <%= link_to h(article.name), article %>
+  </h2>
+  
+  <div class="description"><%= simple_format(article.body) %></div>
+  
+<% end %>
+</div>
+
+

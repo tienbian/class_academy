@@ -9,12 +9,12 @@
 <% end %>
 <div class ="well">
   <%=form_for @document , html: {multipart: true} do |f|%>
-  <%=f.label :name%><br>
+  <%=f.label :name, 'Ten tai lieu'%><br>
   <%=f.text_field :name%><br>
-  <%= f.label :attachment %>
+  <%= f.label :attachment, 'File dinh kem' %>
   <%= f.file_field :attachment %><br>
-  <%= f.label :category%>
-  <%= f.select :category_id, options_for_select(Category.all.collect{ |u| [u.name, u.id] }) %>
+  <%= f.label :category, 'Mon hoc'%><br>
+  <%= f.select :category_id, options_for_select(Category.all.collect{ |u| [u.name, u.id] }) %><br><br>
   <%= f.submit "Save", class: "btn btn-primary" %>
   <% end %>
 </div>

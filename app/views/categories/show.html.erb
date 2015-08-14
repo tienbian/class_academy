@@ -5,11 +5,11 @@
   </div>
 <% end %>
 <p>
-  <strong>Name:</strong>
+  <strong>Ten mon hoc:</strong>
   <%= @category.name %>
 </p>
 <p>
-  <strong>Lecturer_Name:</strong>
+  <strong>Giảng viên:</strong>
   <%= @category.lecturer_name %>
 </p>
 
@@ -30,8 +30,8 @@
       <tr>
         <td><%= resume.name %></td>
         <td><%= link_to resume.attachment_url, resume.attachment_url %></td>
-        <td><%= button_to 'Destroy', resume, method: :delete,class: "btn btn-danger", data: { confirm: "Are you sure that you wish to delete #{resume.name}" } %></td>
-      </tr>
+        <!-- <td><%= button_to 'Destroy', resume, method: :delete,class: "btn btn-danger", data: { confirm: "Are you sure that you wish to delete #{resume.name}" } %></td>
+      </tr> -->
     <% end %>
   </tbody>
 </table>

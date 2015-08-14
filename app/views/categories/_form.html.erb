@@ -12,14 +12,15 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label :name, 'Ten mon hoc' %><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :lecturer_name %><br>
+    <%= f.label :lecturer_name, 'Giảng viên'%><br>
     <%= f.text_field :lecturer_name %>
   </div>
+  <br>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: 'btn btn-primary btn-md'%>
   </div>
 <% end %>

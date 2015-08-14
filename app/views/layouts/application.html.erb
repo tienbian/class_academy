@@ -87,14 +87,14 @@ min-height: 1000px;
               <li class="sidebar-menu-item"><a data-toggle="collapse" data-parent="#sidebar" href="#sidebar-category">
                
                 <span class="glyphicon glyphicon-list-alt"></span>
-                <span class="text">CATEGORIES</span><span class="pull-right caret"></span></a><ul id="sidebar-category" class="collapse nav nav-pills nav-stacked" >
+                <span class="text">MÔN HỌC</span><span class="pull-right caret"></span></a><ul id="sidebar-category" class="collapse nav nav-pills nav-stacked" >
                  
                   <%=render "categories/index"%>    
               </li>
             </ul>
             <ul class="nav nav-sidebar">
               <li class="sidebar-menu-item">           
-                <%=link_to "USER", users_path%>              
+                <%=link_to "HỌC VIÊN", users_path%>              
               </li>
             </ul>
         </div>        
@@ -116,11 +116,6 @@ $(document).ready(function(){
 });
 </script>
 
-</body> 
-
-    
-<div class="container" style="padding-top:20px;">
-<%= yield %>
 
 </body>
 </html>

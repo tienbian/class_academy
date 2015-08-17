@@ -32,8 +32,9 @@
     <%= f.text_field :address %>
   </div>
   <div class="field">
+
     <%= f.label :birthday %><br>
-    <%= f.date_field   :birthday %>
+    <%= f.datetime_field :birthday, placeholder: "dd/mm/YYYY "%>
   </div>
   <div class="field">
     <%= f.label :facebook %><br>
